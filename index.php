@@ -22,20 +22,20 @@ if (!$conn) {
 
 $method = $_SERVER['REQUEST_METHOD'];
 
-// if (isset($_GET['delete'])) {
-//     $sno = $_GET['delete'];
+if (isset($_GET['delete'])) {
+    $sno = $_GET['delete'];
    
-//     $sql="DELETE FROM `notes` WHERE `notes`.`sno` = $sno";
+    $sql="DELETE FROM `notes` WHERE `notes`.`sno` = $sno";
 
-//     $result=mysqli_query($conn,$sql);
+    $result=mysqli_query($conn,$sql);
 
-//     if($result){
-//         $delete=true;
-//     }else{
-//         echo 'Data has not been deleted'.mysqli_error($conn);
-//     }
+    if($result){
+        $delete=true;
+    }else{
+        echo 'Data has not been deleted'.mysqli_error($conn);
+    }
 
-// }
+}
 
 if ($method == 'POST') {
 
