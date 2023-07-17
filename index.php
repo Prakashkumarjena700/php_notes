@@ -262,18 +262,18 @@ if ($method == 'POST') {
         })
     })
 
-    // deletes = document.getElementsByClassName('delete');
-    // Array.from(deletes).forEach((ele) => {
-    //     ele.addEventListener('click', (e) => {
-    //         sno = e.target.id.substr(1)
+    deletes = document.getElementsByClassName('delete');
+    Array.from(deletes).forEach((ele) => {
+        ele.addEventListener('click', (e) => {
+            sno = e.target.id.substr(1)
 
-    //         if (confirm("Are you sure you want to delete this note!")) {
-    //             window.location = `/classes/crud/index.php?delete=${sno}`
-    //         } else {
-    //             console.log('No')
-    //         }
-    //     })
-    // })
+            if (confirm("Are you sure you want to delete this note!")) {
+                window.location = `/classes/crud/index.php?delete=${sno}`
+            } else {
+                console.log('No')
+            }
+        })
+    })
 
 
 </script>
